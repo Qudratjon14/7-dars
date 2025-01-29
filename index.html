@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-xl font-bold text-blue-900">MARS<span class="text-red-500">°</span></h1>
+            <button id="changeLang" class="text-red-500 text-sm">O'ZB</button>
+        </div>
+        <h2 class="text-2xl font-semibold text-center mb-4">Spacega xush kelibsiz</h2>
+        <div class="flex bg-gray-200 rounded-lg p-1 mb-4">
+            <button id="studentBtn" class="w-1/2 bg-blue-500 text-white py-2 rounded-lg">O‘quvchiman</button>
+            <button id="parentBtn" class="w-1/2 bg-white text-black py-2 rounded-lg">Ota-onaman</button>
+        </div>
+        <input type="text" id="loginInput" placeholder="Modme ID yoki Telefon raqam"
+            class="w-full px-4 py-2 mb-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div class="relative">
+            <input type="password" id="passwordInput" placeholder="Parol"
+                class="w-full px-4 py-2 pr-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <span id="togglePassword"
+                class="absolute inset-y-0 right-3 flex items-center text-gray-400 cursor-pointer">Ko‘rsatish</span>
+        </div>
+        <button id="qrBtn" class="text-center text-blue-500 text-sm mt-2 cursor-pointer">
+            QR code orqali kirish
+        </button>
+        <button id="submitBtn"
+            class="w-full bg-red-500 text-white py-2 rounded-lg mt-4 hover:bg-red-600">Tasdiqlash</button>
+    </div>
+    <div id="qrModal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-5 rounded-lg shadow-lg">
+            <img src="qr-code.png" alt="QR Code" class="w-48 h-48 mx-auto">
+            <button id="closeQr"
+                class="mt-4 w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600">Yopish</button>
+        </div>
+    </div>
+    <script defer src="script.js"></script>
+</body>
+
+</html>
